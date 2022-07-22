@@ -3,7 +3,7 @@ Shadowsocks client (with GUI) and server (for VPS) with obfuscation
 
 SS-Obfuscator-Server
 --
-Rent a VPS with a foreign IP address and install a package on it `ss-obfuscator-server` (rpm/deb).
+Rent a VPS with a foreign IP address and install a package on it `ss-obfuscator-server` (rpm/deb)
 
 SS-Obfuscator-Client
 --
@@ -11,4 +11,4 @@ Install the `ss-obfuscator-client` package, launch the GUI, enter the IP address
 
 Details:
 --
-By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file `/etc/ss-obfuscator-server/server.json`. If you need a client configuration file, it is here: `~/.config/ss-obfuscator-client/client.json`.
+By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file `/etc/ss-obfuscator-server/server.json`. If you need a client configuration file, it is here: `~/.config/ss-obfuscator-client/client.json`
