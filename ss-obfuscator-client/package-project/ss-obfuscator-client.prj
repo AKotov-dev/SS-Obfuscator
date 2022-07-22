@@ -1,0 +1,80 @@
+[NAME]
+name=ss-obfuscator-client
+
+[VERSION]
+version=0.1
+
+[RELEASE]
+release=0.mrx9
+
+[GROUP]
+group=Applications/Internet
+
+[DESCRIPTION]
+0=Shadowsocks obfuscator GUI (client)
+1=---
+2=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2022
+
+[SUMMARY]
+summary=Shadowsocks obfuscator GUI (client)
+
+[URLCOPY]
+urlcopy=111
+
+[LICENSE]
+license=GPLv3
+
+[DEPS]
+deps=shadowsocks-libev systemd
+
+[META]
+meta=0
+
+[NOARCH]
+noarch=0
+
+[SIGN]
+sign=0
+
+[DEB]
+deb=1
+
+[FILES]
+0=/usr/bin/xray-plugin
+1=/usr/bin/ss-obfuscator-client
+2=/usr/share/ss-obfuscator-client/
+3=/usr/share/icons/ss-obfuscator-client.png
+4=/usr/share/applications/ss-obfuscator-client.desktop
+5=/etc/systemd/user/ss-obfuscator-client.service
+6=/usr/share/doc/ss-obfuscator-client/
+
+[AFTERINSTALL]
+0=#!/bin/bash
+1=
+2=systemctl daemon-reload
+
+[AFTERREMOVE]
+0=#!/bin/bash
+1=
+2=systemctl daemon-reload
+
+[URL32]
+url32=11
+
+[URL64]
+url64=
+
+[PROGRAMNAME]
+programname=SS-Obfuscator-Client
+
+[DEVTOOL]
+devtool=Lazarus
+
+[TOOLVERSION]
+toolversion=2.2.0

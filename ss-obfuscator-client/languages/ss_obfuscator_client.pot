@@ -1,0 +1,63 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tmainform.autostartbox.caption
+msgid "Autostart after reboot"
+msgstr ""
+
+#: tmainform.caption
+msgid "SS-Obfuscator-Client"
+msgstr ""
+
+#: tmainform.clearbox.caption
+msgid "Clear cookies on start GUI"
+msgstr ""
+
+#: tmainform.clearbox.hint
+msgid "Mageia only"
+msgstr ""
+
+#: tmainform.edit1.text
+msgid "192.168.0.77"
+msgstr ""
+
+#: tmainform.edit2.text
+msgid "8383"
+msgstr ""
+
+#: tmainform.edit3.text
+msgid "6v5mTMPy2nQvRY9GXZsRkrqLk2guR6Z0i4f9mupi1B9pj51A5W"
+msgstr ""
+
+#: tmainform.label1.caption
+msgid "Server IP:"
+msgstr ""
+
+#: tmainform.label2.caption
+msgid "Server port:"
+msgstr ""
+
+#: tmainform.label3.caption
+msgid "Password:"
+msgstr ""
+
+#: tmainform.label4.caption
+msgid "Local port:"
+msgstr ""
+
+#: tmainform.localportedit.text
+msgid "1080"
+msgstr ""
+
+#: tmainform.startbtn.caption
+msgid "Start"
+msgstr ""
+
+#: tmainform.statictext1.caption
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgstr ""
+
+#: tmainform.stopbtn.caption
+msgid "Stop"
+msgstr ""
+

@@ -1,0 +1,74 @@
+[NAME]
+name=ss-obfuscator-server
+
+[VERSION]
+version=0.1
+
+[RELEASE]
+release=0.mgx9
+
+[GROUP]
+group=Applications/Internet
+
+[DESCRIPTION]
+0=Shadowsocks server with obfuscator
+1=---
+2=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2022
+
+[SUMMARY]
+summary=Shadowsocks server with obfuscator
+
+[URLCOPY]
+urlcopy=111
+
+[LICENSE]
+license=GPLv3
+
+[DEPS]
+deps=shadowsocks-libev systemd
+
+[META]
+meta=0
+
+[NOARCH]
+noarch=0
+
+[SIGN]
+sign=0
+
+[DEB]
+deb=1
+
+[FILES]
+0=/usr/bin/xray-plugin
+1=/etc/ss-obfuscator-server/
+2=/etc/systemd/system/ss-obfuscator-server.service
+3=/usr/share/doc/ss-obfuscator-server/
+
+[AFTERINSTALL]
+0=#!/bin/bash
+1=
+2=systemctl daemon-reload
+3=systemctl enable ss-obfuscator-server.service
+4=systemctl restart ss-obfuscator-server.service
+
+[URL32]
+url32=11
+
+[URL64]
+url64=
+
+[PROGRAMNAME]
+programname=SS-Obfuscator-Server
+
+[DEVTOOL]
+devtool=Shell
+
+[TOOLVERSION]
+toolversion=unknown

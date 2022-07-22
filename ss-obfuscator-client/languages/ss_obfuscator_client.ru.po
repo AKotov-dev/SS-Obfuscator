@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: alex_q_2000\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: tmainform.autostartbox.caption
+msgid "Autostart after reboot"
+msgstr "Автостарт после перезагрузки"
+
+#: tmainform.caption
+msgid "SS-Obfuscator-Client"
+msgstr ""
+
+#: tmainform.clearbox.caption
+msgid "Clear cookies on start GUI"
+msgstr "Очистить cookies при старте GUI"
+
+#: tmainform.clearbox.hint
+msgid "Mageia only"
+msgstr "Только Mageia"
+
+#: tmainform.edit1.text
+msgid "192.168.0.77"
+msgstr ""
+
+#: tmainform.edit2.text
+msgid "8383"
+msgstr ""
+
+#: tmainform.edit3.text
+msgid "6v5mTMPy2nQvRY9GXZsRkrqLk2guR6Z0i4f9mupi1B9pj51A5W"
+msgstr ""
+
+#: tmainform.label1.caption
+msgid "Server IP:"
+msgstr "IP cервера:"
+
+#: tmainform.label2.caption
+msgid "Server port:"
+msgstr "Порт сервера:"
+
+#: tmainform.label3.caption
+msgid "Password:"
+msgstr "Пароль:"
+
+#: tmainform.label4.caption
+msgid "Local port:"
+msgstr "Локальный порт:"
+
+#: tmainform.localportedit.text
+msgid "1080"
+msgstr ""
+
+#: tmainform.startbtn.caption
+msgid "Start"
+msgstr "Старт"
+
+#: tmainform.statictext1.caption
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgstr ""
+
+#: tmainform.stopbtn.caption
+msgid "Stop"
+msgstr "Стоп"

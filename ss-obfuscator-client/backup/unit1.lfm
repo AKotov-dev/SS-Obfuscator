@@ -1,0 +1,220 @@
+object MainForm: TMainForm
+  Left = 313
+  Height = 625
+  Top = 123
+  Width = 848
+  Caption = 'SS-Obfuscator-Client'
+  ClientHeight = 625
+  ClientWidth = 848
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  SessionProperties = 'Width;Height;Left;Top'
+  LCLVersion = '2.2.0.4'
+  object Label1: TLabel
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 17
+    Top = 18
+    Width = 55
+    Caption = 'Server IP:'
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Edit1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrCenter
+    Left = 279
+    Height = 17
+    Top = 18
+    Width = 69
+    Anchors = [akTop]
+    BorderSpacing.Left = 12
+    Caption = 'Server port:'
+  end
+  object Label3: TLabel
+    AnchorSideTop.Control = Edit3
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 17
+    Top = 58
+    Width = 61
+    Caption = 'Password:'
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = Edit3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrCenter
+    Left = 274
+    Height = 17
+    Top = 58
+    Width = 64
+    Anchors = [akTop]
+    BorderSpacing.Left = 8
+    Caption = 'Local port:'
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrCenter
+    Left = 65
+    Height = 36
+    Top = 8
+    Width = 167
+    BorderSpacing.Left = 2
+    TabOrder = 0
+    Text = '192.168.0.77'
+  end
+  object Edit2: TEdit
+    AnchorSideLeft.Control = Label2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrCenter
+    Left = 350
+    Height = 36
+    Top = 8
+    Width = 104
+    BorderSpacing.Left = 2
+    TabOrder = 1
+    Text = '8383'
+  end
+  object Edit3: TEdit
+    AnchorSideLeft.Control = Label3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Edit1
+    AnchorSideRight.Side = asrBottom
+    Left = 71
+    Height = 36
+    Top = 48
+    Width = 161
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 2
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+    Text = '6v5mTMPy2nQvRY9GXZsRkrqLk2guR6Z0i4f9mupi1B9pj51A5W'
+  end
+  object LocalPortEdit: TEdit
+    AnchorSideLeft.Control = Label4
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label4
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edit2
+    AnchorSideRight.Side = asrBottom
+    Left = 340
+    Height = 36
+    Top = 48
+    Width = 114
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 2
+    TabOrder = 3
+    Text = '1080'
+  end
+  object LogMemo: TMemo
+    AnchorSideTop.Control = StopBtn
+    AnchorSideTop.Side = asrBottom
+    Left = 0
+    Height = 513
+    Top = 92
+    Width = 848
+    Align = alBottom
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 8
+    Font.Height = -12
+    Font.Name = 'Monospace'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 4
+    WantReturns = False
+    WordWrap = False
+  end
+  object StartBtn: TSpeedButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 750
+    Height = 34
+    Top = 8
+    Width = 93
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 5
+    Caption = 'Start'
+    OnClick = StartBtnClick
+  end
+  object StopBtn: TSpeedButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LocalPortEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 750
+    Height = 34
+    Top = 50
+    Width = 93
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Right = 5
+    Caption = 'Stop'
+    OnClick = StopBtnClick
+  end
+  object AutoStartBox: TCheckBox
+    AnchorSideLeft.Control = Edit2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edit2
+    AnchorSideTop.Side = asrCenter
+    Left = 523
+    Height = 32
+    Top = 10
+    Width = 166
+    Anchors = [akTop, akRight]
+    BorderSpacing.Left = 8
+    Caption = 'Autostart after reboot'
+    OnChange = AutoStartBoxChange
+    TabOrder = 5
+  end
+  object ClearBox: TCheckBox
+    AnchorSideLeft.Control = AutoStartBox
+    AnchorSideTop.Control = LocalPortEdit
+    AnchorSideTop.Side = asrCenter
+    Left = 523
+    Height = 32
+    Hint = 'Mageia only'
+    Top = 50
+    Width = 190
+    Caption = 'Clear cookies on start GUI'
+    OnChange = ClearBoxChange
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+  end
+  object Shape1: TShape
+    AnchorSideTop.Control = StartBtn
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = StartBtn
+    Left = 733
+    Height = 12
+    Top = 19
+    Width = 12
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 5
+    Brush.Color = clYellow
+    Pen.Color = clGray
+    Shape = stCircle
+  end
+  object StaticText1: TStaticText
+    Left = 0
+    Height = 20
+    Top = 605
+    Width = 848
+    Align = alBottom
+    Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
+    Font.Color = clGray
+    Font.Height = -11
+    Font.Name = 'Sans'
+    ParentFont = False
+    TabOrder = 7
+  end
+  object IniPropStorage1: TIniPropStorage
+    StoredValues = <>
+    Left = 48
+    Top = 120
+  end
+end
