@@ -1,0 +1,11 @@
+[Unit]
+Description=SS-Obfuscator-Server Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=ss-server -c /etc/ss-obfuscator-server/server.json
+ExecStop=killall ss-server
+
+[Install]
+WantedBy=multi-user.target

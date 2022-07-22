@@ -123,7 +123,8 @@ begin
     S.SaveToFile(GetUserDir + '.config/ss-obfuscator-client/client.json');
 
     //Запоминаем настройки только по нажатию Start
-    INI := TINIFile.Create(GetUserDir + '.config/ss-obfuscator-client/ss-obfuscator-client.ini');
+    INI := TINIFile.Create(GetUserDir +
+      '.config/ss-obfuscator-client/ss-obfuscator-client.ini');
     INI.WriteString('settings', 'server', Edit1.Text);
     INI.WriteString('settings', 'server_port', Edit2.Text);
     INI.WriteString('settings', 'password', Edit3.Text);
@@ -156,13 +157,15 @@ begin
       MkDir(GetUserDir + '.config/ss-obfuscator-client');
 
     //Для настроек по нажатию Start (server, server_port, password и local_port)
-    INI := TINIFile.Create(GetUserDir + '.config/ss-obfuscator-client/ss-obfuscator-client.ini');
+    INI := TINIFile.Create(GetUserDir +
+      '.config/ss-obfuscator-client/ss-obfuscator-client.ini');
 
     //Для сохранения настроек формы и др.
     IniPropStorage1.IniFileName := INI.FileName;
 
     //Начитываем настройки из ss-obfuscator-client.ini или дефолтные
-    if FileExists(GetUserDir + '.config/ss-obfuscator-client/ss-obfuscator-client.ini') then
+    if FileExists(GetUserDir +
+      '.config/ss-obfuscator-client/ss-obfuscator-client.ini') then
     begin
       Edit1.Text := INI.ReadString('settings', 'server', '192.168.0.77');
       Edit2.Text := INI.ReadString('settings', 'server_port', '8383');
@@ -189,9 +192,11 @@ begin
   Application.ProcessMessages;
 
   if not AutoStartBox.Checked then
-    RunCommand('/bin/bash', ['-c', 'systemctl --user disable ss-obfuscator-client.service'], S)
+    RunCommand('/bin/bash', ['-c',
+      'systemctl --user disable ss-obfuscator-client.service'], S)
   else
-    RunCommand('/bin/bash', ['-c', 'systemctl --user enable ss-obfuscator-client.service'], S);
+    RunCommand('/bin/bash', ['-c',
+      'systemctl --user enable ss-obfuscator-client.service'], S);
   Screen.Cursor := crDefault;
 end;
 

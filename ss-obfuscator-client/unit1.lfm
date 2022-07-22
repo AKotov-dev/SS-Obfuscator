@@ -2,10 +2,10 @@ object MainForm: TMainForm
   Left = 313
   Height = 625
   Top = 123
-  Width = 848
+  Width = 846
   Caption = 'SS-Obfuscator-Client'
   ClientHeight = 625
-  ClientWidth = 848
+  ClientWidth = 846
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -23,7 +23,7 @@ object MainForm: TMainForm
     AnchorSideLeft.Control = Edit1
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Side = asrCenter
-    Left = 279
+    Left = 278
     Height = 17
     Top = 18
     Width = 69
@@ -44,7 +44,7 @@ object MainForm: TMainForm
     AnchorSideLeft.Control = Edit3
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Side = asrCenter
-    Left = 274
+    Left = 273
     Height = 17
     Top = 58
     Width = 64
@@ -70,7 +70,7 @@ object MainForm: TMainForm
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Label2
     AnchorSideTop.Side = asrCenter
-    Left = 350
+    Left = 349
     Height = 36
     Top = 8
     Width = 104
@@ -101,7 +101,7 @@ object MainForm: TMainForm
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = Edit2
     AnchorSideRight.Side = asrBottom
-    Left = 340
+    Left = 339
     Height = 36
     Top = 48
     Width = 114
@@ -116,7 +116,7 @@ object MainForm: TMainForm
     Left = 0
     Height = 513
     Top = 92
-    Width = 848
+    Width = 846
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 8
@@ -132,7 +132,7 @@ object MainForm: TMainForm
   object StartBtn: TSpeedButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 750
+    Left = 748
     Height = 34
     Top = 8
     Width = 93
@@ -146,7 +146,7 @@ object MainForm: TMainForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = LocalPortEdit
     AnchorSideBottom.Side = asrBottom
-    Left = 750
+    Left = 748
     Height = 34
     Top = 50
     Width = 93
@@ -160,11 +160,11 @@ object MainForm: TMainForm
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Edit2
     AnchorSideTop.Side = asrCenter
-    Left = 523
+    Left = 504
     Height = 32
     Top = 10
     Width = 166
-    Anchors = [akTop, akRight]
+    Anchors = [akTop]
     BorderSpacing.Left = 8
     Caption = 'Autostart after reboot'
     OnChange = AutoStartBoxChange
@@ -174,7 +174,7 @@ object MainForm: TMainForm
     AnchorSideLeft.Control = AutoStartBox
     AnchorSideTop.Control = LocalPortEdit
     AnchorSideTop.Side = asrCenter
-    Left = 523
+    Left = 504
     Height = 32
     Hint = 'Mageia only'
     Top = 50
@@ -189,7 +189,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = StartBtn
-    Left = 733
+    Left = 731
     Height = 12
     Top = 19
     Width = 12
@@ -203,7 +203,7 @@ object MainForm: TMainForm
     Left = 0
     Height = 20
     Top = 605
-    Width = 848
+    Width = 846
     Align = alBottom
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
     Font.Color = clGray

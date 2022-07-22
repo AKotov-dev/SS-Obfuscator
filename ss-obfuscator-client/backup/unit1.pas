@@ -75,7 +75,7 @@ end;
 //Проверка чекбокса ClearBox (очистка кеш/cookies)
 function CheckClear: boolean;
 begin
-  if FileExists(GetUserDir + '.config/ss_obfs_gui/clear') then
+  if FileExists(GetUserDir + '.config/ss-obfuscator-client/clear') then
     Result := True
   else
     Result := False;
@@ -87,7 +87,7 @@ var
   S: ansistring;
 begin
   RunCommand('/bin/bash', ['-c',
-    '[[ -n $(systemctl --user is-enabled ss_obfs_gui | grep "enabled") ]] && echo "yes"'],
+    '[[ -n $(systemctl --user is-enabled ss-obfuscator-client | grep "enabled") ]] && echo "yes"'],
     S);
 
   if Trim(S) = 'yes' then
@@ -120,17 +120,17 @@ begin
     S.Add('    "nameserver":"1.1.1.1,8.8.4.4",');
     S.Add('    "reuse_port":true ');
     S.Add('}');
-    S.SaveToFile(GetUserDir + '.config/ss_obfs_gui/client.json');
+    S.SaveToFile(GetUserDir + '.config/ss-obfuscator-client/client.json');
 
     //Запоминаем настройки только по нажатию Start
-    INI := TINIFile.Create(GetUserDir + '.config/ss_obfs_gui/ss_obfs_gui.ini');
+    INI := TINIFile.Create(GetUserDir + '.config/ss-obfuscator-client/ss-obfuscator-client.ini');
     INI.WriteString('settings', 'server', Edit1.Text);
     INI.WriteString('settings', 'server_port', Edit2.Text);
     INI.WriteString('settings', 'password', Edit3.Text);
     INI.WriteString('settings', 'local_port', LocalPortEdit.Text);
 
     //Запускаем сервис
-    StartProcess('systemctl --user restart ss_obfs_gui.service');
+    StartProcess('systemctl --user restart ss-obfuscator-client.service');
   finally
     S.Free;
     INI.Free;
@@ -140,7 +140,7 @@ end;
 //Стоп
 procedure TMainForm.StopBtnClick(Sender: TObject);
 begin
-  StartProcess('systemctl --user stop ss_obfs_gui.service');
+  StartProcess('systemctl --user stop ss-obfuscator-client.service');
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
@@ -152,17 +152,17 @@ begin
 
     //Создаём каталоги настроек
     if not DirectoryExists(GetUserDir + '.config') then MkDir(GetUserDir + '.config');
-    if not DirectoryExists(GetUserDir + '.config/ss_obfs_gui') then
-      MkDir(GetUserDir + '.config/ss_obfs_gui');
+    if not DirectoryExists(GetUserDir + '.config/ss-obfuscator-client') then
+      MkDir(GetUserDir + '.config/ss-obfuscator-client');
 
     //Для настроек по нажатию Start (server, server_port, password и local_port)
-    INI := TINIFile.Create(GetUserDir + '.config/ss_obfs_gui/ss_obfs_gui.ini');
+    INI := TINIFile.Create(GetUserDir + '.config/ss-obfuscator-client/ss-obfuscator-client.ini');
 
     //Для сохранения настроек формы и др.
     IniPropStorage1.IniFileName := INI.FileName;
 
-    //Начитываем настройки из ss_obfs_gui.ini или дефолтные
-    if FileExists(GetUserDir + '.config/ss_obfs_gui/ss_obfs_gui.ini') then
+    //Начитываем настройки из ss-obfuscator-client.ini или дефолтные
+    if FileExists(GetUserDir + '.config/ss-obfuscator-client/ss-obfuscator-client.ini') then
     begin
       Edit1.Text := INI.ReadString('settings', 'server', '192.168.0.77');
       Edit2.Text := INI.ReadString('settings', 'server_port', '8383');
@@ -189,9 +189,9 @@ begin
   Application.ProcessMessages;
 
   if not AutoStartBox.Checked then
-    RunCommand('/bin/bash', ['-c', 'systemctl --user disable ss_obfs_gui.service'], S)
+    RunCommand('/bin/bash', ['-c', 'systemctl --user disable ss-obfuscator-client.service'], S)
   else
-    RunCommand('/bin/bash', ['-c', 'systemctl --user enable ss_obfs_gui.service'], S);
+    RunCommand('/bin/bash', ['-c', 'systemctl --user enable ss-obfuscator-client.service'], S);
   Screen.Cursor := crDefault;
 end;
 
@@ -201,9 +201,9 @@ var
   S: ansistring;
 begin
   if not ClearBox.Checked then
-    RunCommand('/bin/bash', ['-c', 'rm -f ~/.config/ss_obfs_gui/clear'], S)
+    RunCommand('/bin/bash', ['-c', 'rm -f ~/.config/ss-obfuscator-client/clear'], S)
   else
-    RunCommand('/bin/bash', ['-c', 'touch ~/.config/ss_obfs_gui/clear'], S);
+    RunCommand('/bin/bash', ['-c', 'touch ~/.config/ss-obfuscator-client/clear'], S);
 end;
 
 //MainForm, запуск потоков

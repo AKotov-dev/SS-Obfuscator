@@ -47,7 +47,8 @@ begin
     ExProcess.Parameters.Add('-c');
 
     //Если файл лога отсутствует - создаём пустой и читаем до Terminate
-    ExProcess.Parameters.Add('[[ -f ~/.config/ss-obfuscator-client/ss-obfuscator-client.log ]] || touch ' +
+    ExProcess.Parameters.Add(
+      '[[ -f ~/.config/ss-obfuscator-client/ss-obfuscator-client.log ]] || touch ' +
       '~/.config/ss-obfuscator-client/ss-obfuscator-client.log && tail -n 100 -f ~/.config/ss-obfuscator-client/ss-obfuscator-client.log 2> >(grep -v truncated >&2)');
 
     ExProcess.Options := [poUsePipes, poStderrToOutPut];

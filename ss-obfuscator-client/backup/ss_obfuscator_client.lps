@@ -38,8 +38,10 @@
       <Unit>
         <Filename Value="ss_obfuscator_client.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <UsageCount Value="24"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="unit1.pas"/>
@@ -48,8 +50,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <TopLine Value="187"/>
-        <CursorPos X="22" Y="191"/>
+        <TopLine Value="150"/>
+        <CursorPos X="79" Y="146"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -57,9 +59,8 @@
       <Unit>
         <Filename Value="start_trd.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="72"/>
+        <TopLine Value="38"/>
         <CursorPos X="71" Y="38"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -67,8 +68,10 @@
       <Unit>
         <Filename Value="portscan_trd.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="48"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/share/fpcsrc/rtl/objpas/sysutils/finah.inc"/>
@@ -84,7 +87,7 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="2">
+    <JumpHistory HistoryIndex="3">
       <Position>
         <Filename Value="unit1.pas"/>
         <Caret Line="3" Column="39"/>
@@ -96,6 +99,10 @@
       <Position>
         <Filename Value="start_trd.pas"/>
         <Caret Line="15" Column="50" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="191" Column="22" TopLine="187"/>
       </Position>
     </JumpHistory>
     <RunParams>
