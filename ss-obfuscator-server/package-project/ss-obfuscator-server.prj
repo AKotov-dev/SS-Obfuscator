@@ -2,7 +2,7 @@
 name=ss-obfuscator-server
 
 [VERSION]
-version=0.1
+version=0.2
 
 [RELEASE]
 release=0.mgx9
@@ -85,3 +85,8 @@ toolversion=unknown
 8=
 9=Details:
 10=By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file /etc/ss-obfuscator-server/server.json. If you need a client configuration file, it is here: ~/.config/ss-obfuscator-client/client.json
+11=
+12=v0.2
+13=+ Changed the server port to 443 by default
+14=
+15=v0.1 - Initial release
