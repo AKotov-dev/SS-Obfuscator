@@ -59,9 +59,12 @@ object MainForm: TMainForm
     AnchorSideTop.Side = asrCenter
     Left = 65
     Height = 36
+    Hint = 'Specify the IP of your server'
     Top = 8
     Width = 167
     BorderSpacing.Left = 2
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
     Text = '192.168.0.77'
   end
@@ -72,9 +75,12 @@ object MainForm: TMainForm
     AnchorSideTop.Side = asrCenter
     Left = 349
     Height = 36
+    Hint = 'Default: 443'
     Top = 8
     Width = 104
     BorderSpacing.Left = 2
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
     Text = '443'
   end
@@ -103,10 +109,13 @@ object MainForm: TMainForm
     AnchorSideRight.Side = asrBottom
     Left = 339
     Height = 36
+    Hint = 'Default: 1080'
     Top = 48
     Width = 114
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 2
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
     Text = '1080'
   end

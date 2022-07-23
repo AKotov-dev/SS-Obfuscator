@@ -28,9 +28,17 @@ msgstr "Очистить cookies при старте GUI"
 msgid "Mageia only"
 msgstr "Только Mageia"
 
+#: tmainform.edit1.hint
+msgid "Specify the IP of your server"
+msgstr "Укажите IP вашего сервера"
+
 #: tmainform.edit1.text
 msgid "192.168.0.77"
 msgstr ""
+
+#: tmainform.edit2.hint
+msgid "Default: 443"
+msgstr "По умолчанию: 443"
 
 #: tmainform.edit2.text
 msgid "443"
@@ -56,6 +64,10 @@ msgstr "Пароль:"
 msgid "Local port:"
 msgstr "Локальный порт:"
 
+#: tmainform.localportedit.hint
+msgid "Default: 1080"
+msgstr "По умолчанию: 1080"
+
 #: tmainform.localportedit.text
 msgid "1080"
 msgstr ""
@@ -71,4 +83,3 @@ msgstr "Лицензия: GPLv3   Автор: alex_q_2000 (C) 2022   URL: https:
 #: tmainform.stopbtn.caption
 msgid "Stop"
 msgstr "Стоп"
-

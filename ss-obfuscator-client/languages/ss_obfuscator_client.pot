@@ -17,8 +17,16 @@ msgstr ""
 msgid "Mageia only"
 msgstr ""
 
+#: tmainform.edit1.hint
+msgid "Specify the IP of your server"
+msgstr ""
+
 #: tmainform.edit1.text
 msgid "192.168.0.77"
+msgstr ""
+
+#: tmainform.edit2.hint
+msgid "Default: 443"
 msgstr ""
 
 #: tmainform.edit2.text
@@ -43,6 +51,10 @@ msgstr ""
 
 #: tmainform.label4.caption
 msgid "Local port:"
+msgstr ""
+
+#: tmainform.localportedit.hint
+msgid "Default: 1080"
 msgstr ""
 
 #: tmainform.localportedit.text

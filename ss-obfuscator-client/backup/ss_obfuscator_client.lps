@@ -68,8 +68,8 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="40"/>
-        <CursorPos X="39" Y="66"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="69"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -87,7 +87,7 @@
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="3">
+    <JumpHistory HistoryIndex="4">
       <Position>
         <Filename Value="unit1.pas"/>
         <Caret Line="3" Column="39"/>
@@ -103,6 +103,10 @@
       <Position>
         <Filename Value="portscan_trd.pas"/>
         <Caret Line="64" Column="44" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="portscan_trd.pas"/>
+        <Caret Line="66" Column="39" TopLine="40"/>
       </Position>
     </JumpHistory>
     <RunParams>
