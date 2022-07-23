@@ -60,12 +60,13 @@ end;
 //Отображение статуса
 procedure PortScan.ShowStatus;
 begin
-  if ResultStr.Count <> 0 then
-    MainForm.Shape1.Brush.Color := clLime
-  else
-    MainForm.Shape1.Brush.Color := clYellow;
+    if ResultStr.Count <> 0 then
+      MainForm.Shape1.Brush.Color := clLime
+    else
+      MainForm.Shape1.Brush.Color := clYellow;
 
-  MainForm.Shape1.Repaint;
+    MainForm.Shape1.Repaint;
+  end;
 end;
 
 end.
