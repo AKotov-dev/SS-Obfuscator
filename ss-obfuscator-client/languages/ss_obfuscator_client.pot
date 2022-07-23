@@ -22,7 +22,7 @@ msgid "192.168.0.77"
 msgstr ""
 
 #: tmainform.edit2.text
-msgid "8383"
+msgid "443"
 msgstr ""
 
 #: tmainform.edit3.text

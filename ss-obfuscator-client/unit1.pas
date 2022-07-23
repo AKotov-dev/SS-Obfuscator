@@ -118,7 +118,7 @@ begin
     S.Add('    "fast_open":true,');
     S.Add('    "plugin":"xray-plugin",');
     S.Add('    "nameserver":"1.1.1.1,8.8.4.4",');
-    S.Add('    "reuse_port":true ');
+    S.Add('    "reuse_port":true');
     S.Add('}');
     S.SaveToFile(GetUserDir + '.config/ss-obfuscator-client/client.json');
 
@@ -168,7 +168,7 @@ begin
       '.config/ss-obfuscator-client/ss-obfuscator-client.ini') then
     begin
       Edit1.Text := INI.ReadString('settings', 'server', '192.168.0.77');
-      Edit2.Text := INI.ReadString('settings', 'server_port', '8383');
+      Edit2.Text := INI.ReadString('settings', 'server_port', '443');
       Edit3.Text := INI.ReadString('settings', 'password',
         '6v5mTMPy2nQvRY9GXZsRkrqLk2guR6Z0i4f9mupi1B9pj51A5W');
       LocalPortEdit.Text := INI.ReadString('settings', 'local_port', '1080');

@@ -1,0 +1,12 @@
+{
+    "server":"0.0.0.0",
+    "server_port":443,
+    "password":"6v5mTMPy2nQvRY9GXZsRkrqLk2guR6Z0i4f9mupi1B9pj51A5W",
+    "timeout":10,
+    "method":"chacha20-ietf-poly1305",
+    "fast_open":true,
+    "plugin":"xray-plugin",
+    "plugin_opts":"server",
+    "nameserver":"1.1.1.1,8.8.4.4",
+    "reuse_port": true
+}
