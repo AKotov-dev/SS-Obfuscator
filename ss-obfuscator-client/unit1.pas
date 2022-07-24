@@ -15,9 +15,9 @@ type
   TMainForm = class(TForm)
     AutoStartBox: TCheckBox;
     ClearBox: TCheckBox;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
+    ServerEdit: TEdit;
+    ServerPortEdit: TEdit;
+    PasswordEdit: TEdit;
     LocalPortEdit: TEdit;
     IniPropStorage1: TIniPropStorage;
     Label1: TLabel;
@@ -109,14 +109,15 @@ begin
     //Создаём client.json
     S := TStringList.Create;
     S.Add('{');
-    S.Add('    "server":"' + Edit1.Text + '",');
-    S.Add('    "server_port":' + Edit2.Text + ',');
+    S.Add('    "server":"' + ServerEdit.Text + '",');
+    S.Add('    "server_port":' + ServerPortEdit.Text + ',');
     S.Add('    "local_port":' + LocalPortEdit.Text + ',');
-    S.Add('    "password":"' + Edit3.Text + '",');
-    S.Add('    "timeout":10,');
+    S.Add('    "password":"' + PasswordEdit.Text + '",');
+    S.Add('    "timeout":120,');
     S.Add('    "method":"chacha20-ietf-poly1305",');
     S.Add('    "fast_open":true,');
     S.Add('    "plugin":"xray-plugin",');
+    //S.Add('    "plugin_opts":"mode=grpc",'); (Google могут заблокировать)
     S.Add('    "nameserver":"1.1.1.1,8.8.4.4",');
     S.Add('    "reuse_port":true');
     S.Add('}');
@@ -125,9 +126,9 @@ begin
     //Запоминаем настройки только по нажатию Start
     INI := TINIFile.Create(GetUserDir +
       '.config/ss-obfuscator-client/ss-obfuscator-client.ini');
-    INI.WriteString('settings', 'server', Edit1.Text);
-    INI.WriteString('settings', 'server_port', Edit2.Text);
-    INI.WriteString('settings', 'password', Edit3.Text);
+    INI.WriteString('settings', 'server', ServerEdit.Text);
+    INI.WriteString('settings', 'server_port', ServerPortEdit.Text);
+    INI.WriteString('settings', 'password', PasswordEdit.Text);
     INI.WriteString('settings', 'local_port', LocalPortEdit.Text);
 
     //Запускаем сервис
@@ -167,9 +168,9 @@ begin
     if FileExists(GetUserDir +
       '.config/ss-obfuscator-client/ss-obfuscator-client.ini') then
     begin
-      Edit1.Text := INI.ReadString('settings', 'server', '192.168.0.77');
-      Edit2.Text := INI.ReadString('settings', 'server_port', '443');
-      Edit3.Text := INI.ReadString('settings', 'password',
+      ServerEdit.Text := INI.ReadString('settings', 'server', '192.168.0.77');
+      ServerPortEdit.Text := INI.ReadString('settings', 'server_port', '443');
+      PasswordEdit.Text := INI.ReadString('settings', 'password',
         '6v5mTMPy2nQvRY9GXZsRkrqLk2guR6Z0i4f9mupi1B9pj51A5W');
       LocalPortEdit.Text := INI.ReadString('settings', 'local_port', '1080');
     end;

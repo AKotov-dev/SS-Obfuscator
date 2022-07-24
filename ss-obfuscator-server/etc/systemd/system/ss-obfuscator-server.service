@@ -1,5 +1,6 @@
 [Unit]
 Description=SS-Obfuscator-Server Service
+Wants=network-online.target
 After=network.target
 
 [Service]
