@@ -31,7 +31,7 @@ urlcopy=https://github.com/AKotov-dev/SS-Obfuscator
 license=GPLv3
 
 [DEPS]
-deps=shadowsocks-libev systemd nmap
+deps=shadowsocks-libev systemd
 
 [META]
 meta=0
@@ -96,6 +96,5 @@ toolversion=2.2.0
 13=+ Changed the server port to 443 by default
 14=+ Improved configuration files client.json and server.json
 15=+ Improved ss-obfuscator-client.service and ss-obfuscator-server.service
-16=+ Checking the availability of the server port and client port (indicator lime/yellow)
-17=
-18=v0.1 - Initial release
+16=
+17=v0.1 - Initial release

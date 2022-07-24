@@ -5,7 +5,7 @@ unit portscan_trd;
 interface
 
 uses
-  Classes, Forms, Controls, SysUtils, Process, Graphics, Dialogs;
+  Classes, Forms, Controls, SysUtils, Process, Graphics;
 
 type
   PortScan = class(TThread)
@@ -39,19 +39,19 @@ begin
 
       ScanProcess := TProcess.Create(nil);
 
-      ScanProcess.Executable := 'bash';
+      ScanProcess.Executable := '/bin/bash';
       ScanProcess.Parameters.Add('-c');
       ScanProcess.Options := [poUsePipes, poWaitOnExit]; // poStderrToOutPut,
 
       ScanProcess.Parameters.Add(
-       { '[[ $(fping ' + MainForm.ServerEdit.Text + ') ]] && [[ $(ss -ltn | grep 127.0.0.1:' +
-        MainForm.LocalPortEdit.Text + ') ]] && echo "yes"');}
+        '[[ $(ss -ltn | grep 127.0.0.1:' + MainForm.LocalPortEdit.Text +
+        ') ]] && echo "yes"');
 
-        //Проверка порта удаленного сервера и локального порта клиента
-        '[[ $(nmap ' + MainForm.ServerEdit.Text + ' -p ' +
+      //Проверка порта удаленного сервера и локального порта клиента
+      {  '[[ $(nmap ' + MainForm.ServerEdit.Text + ' -p ' +
         MainForm.ServerPortEdit.Text +
         ' | grep open) ]] && [[ $(ss -ltn | grep 127.0.0.1:' +
-        MainForm.LocalPortEdit.Text + ') ]] && echo "yes"');
+        MainForm.LocalPortEdit.Text + ') ]] && echo "yes"');}
 
       ScanProcess.Execute;
 
@@ -73,17 +73,12 @@ begin
     if ResultStr.Count <> 0 then
     begin
       Shape1.Brush.Color := clLime;
-      ServerEdit.Enabled := False;
-      ServerPortEdit.Enabled := False;
-      PasswordEdit.Enabled := False;
       LocalPortEdit.Enabled := False;
     end
     else
     begin
       Shape1.Brush.Color := clYellow;
       ServerEdit.Enabled := True;
-      ServerPortEdit.Enabled := True;
-      PasswordEdit.Enabled := True;
       LocalPortEdit.Enabled := True;
     end;
 

@@ -48,7 +48,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <CursorPos X="7" Y="120"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="21" Y="6"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -64,9 +65,9 @@
       <Unit>
         <Filename Value="portscan_trd.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="56" Y="8"/>
+        <TopLine Value="25"/>
+        <CursorPos X="34" Y="46"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
