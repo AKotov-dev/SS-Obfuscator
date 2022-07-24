@@ -117,7 +117,7 @@ begin
     S.Add('    "method":"chacha20-ietf-poly1305",');
     S.Add('    "fast_open":true,');
     S.Add('    "plugin":"xray-plugin",');
-    //    S.Add('    "plugin_opts":"mode=grpc",'); (Google могут заблокировать)
+    //S.Add('    "plugin_opts":"mode=grpc",'); (Google могут заблокировать)
     S.Add('    "nameserver":"1.1.1.1,8.8.4.4",');
     S.Add('    "reuse_port":true');
     S.Add('}');

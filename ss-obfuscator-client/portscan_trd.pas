@@ -48,12 +48,6 @@ begin
         '[[ $(ss -ltn | grep 127.0.0.1:' + MainForm.LocalPortEdit.Text +
         ') ]] && echo "yes"');
 
-      //Проверка порта удаленного сервера и локального порта клиента
-      {  '[[ $(nmap ' + MainForm.ServerEdit.Text + ' -p ' +
-        MainForm.ServerPortEdit.Text +
-        ' | grep open) ]] && [[ $(ss -ltn | grep 127.0.0.1:' +
-        MainForm.LocalPortEdit.Text + ') ]] && echo "yes"');}
-
       ScanProcess.Execute;
 
       ResultStr.LoadFromStream(ScanProcess.Output);
@@ -79,7 +73,6 @@ begin
     else
     begin
       Shape1.Brush.Color := clYellow;
-      ServerEdit.Enabled := True;
       LocalPortEdit.Enabled := True;
     end;
 

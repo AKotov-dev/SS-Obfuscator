@@ -43,6 +43,7 @@ begin
       ScanProcess.Parameters.Add('-c');
       ScanProcess.Options := [poUsePipes, poWaitOnExit]; // poStderrToOutPut,
 
+      //Проверка локального порта клиента
       ScanProcess.Parameters.Add(
         '[[ $(ss -ltn | grep 127.0.0.1:' + MainForm.LocalPortEdit.Text +
         ') ]] && echo "yes"');
@@ -78,7 +79,6 @@ begin
     else
     begin
       Shape1.Brush.Color := clYellow;
-      ServerEdit.Enabled := True;
       LocalPortEdit.Enabled := True;
     end;
 

@@ -6,7 +6,7 @@
     "method":"chacha20-ietf-poly1305",
     "fast_open":true,
     "plugin":"xray-plugin",
-    "plugin_opts":"server",
+    "plugin_opts":"server;mode=grpc",
     "nameserver":"1.1.1.1,8.8.4.4",
     "reuse_port": true
 }
