@@ -14,4 +14,6 @@ Install the `ss-obfuscator-client` package to your computer, launch the GUI, ent
   
 Details:
 --
-By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file `/etc/ss-obfuscator-server/server.json`. If you need a client configuration file, it is here: `~/.config/ss-obfuscator-client/client.json`
+By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file `/etc/ss-obfuscator-server/server.json`. If you need a client configuration file, it is here: `~/.config/ss-obfuscator-client/client.json`  
+  
+Similar project: [vmess-ws](https://github.com/AKotov-dev/vmess-ws)
