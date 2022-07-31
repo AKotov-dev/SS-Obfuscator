@@ -16,6 +16,6 @@ Details:
 --
 By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file `/etc/ss-obfuscator-server/server.json`. If you need a client configuration file, it is here: `~/.config/ss-obfuscator-client/client.json`  
   
-`shadowsocks-libev` packages are missing in Fedora and Centos. If necessary, they can be installed manually from the archives `rpmbuild-fedora.tar.gz` и `rpmbuild-centos.tar.gz` accordingly (see the folder `./rpmbuild/RPMS`). You will probably have to disable `selinux` (SELINUX=disable in /etc/selinux/config) and open port `443` (tcp/udp) in `iptables`.  
+`shadowsocks-libev` packages are missing in Fedora and Centos. If necessary, they can be installed manually from the archives `rpmbuild-fedora.tar.gz` и `rpmbuild-centos.tar.gz` accordingly (see the folder `./rpmbuild/RPMS`). You will probably have to disable `selinux` (SELINUX=disable in /etc/selinux/config) and open port `443` (tcp/udp) in `iptables`. You may also need to connect a repository: `yum -y install epel-release`  
   
 Similar project: [vmess-ws](https://github.com/AKotov-dev/vmess-ws)
