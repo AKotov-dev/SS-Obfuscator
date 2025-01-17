@@ -2,7 +2,7 @@
 name=ss-obfuscator-server
 
 [VERSION]
-version=0.3
+version=0.3.1
 
 [RELEASE]
 release=0.mgx9
@@ -39,9 +39,6 @@ meta=0
 [NOARCH]
 noarch=0
 
-[SIGN]
-sign=0
-
 [DEB]
 deb=1
 
@@ -60,9 +57,6 @@ deb=1
 
 [URL32]
 url32=https://github.com/AKotov-dev/SS-Obfuscator
-
-[URL64]
-url64=
 
 [PROGRAMNAME]
 programname=SS-Obfuscator-Server
@@ -86,13 +80,17 @@ toolversion=unknown
 9=Details:
 10=By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file /etc/ss-obfuscator-server/server.json. If you need a client configuration file, it is here: ~/.config/ss-obfuscator-client/client.json
 11=
-12=v0.3
-13=+ Shadowsocks over gRPC
-14=+ Cosmetic edits
+12=v0.3.1
+13=+ Shadowsocks over gRPC (port 443 by default)
+14=+ Update xray-plugin v1.8.24
 15=
-16=v0.2
-17=+ Changed the server port to 443 by default
-18=+ Improved configuration files client.json and server.json
-19=+ Improved ss-obfuscator-client.service and ss-obfuscator-server.service
-20=
-21=v0.1 - Initial release
+16=v0.3
+17=+ Shadowsocks over gRPC
+18=+ Cosmetic edits
+19=
+20=v0.2
+21=+ Changed the server port to 443 by default
+22=+ Improved configuration files client.json and server.json
+23=+ Improved ss-obfuscator-client.service and ss-obfuscator-server.service
+24=
+25=v0.1 - Initial release

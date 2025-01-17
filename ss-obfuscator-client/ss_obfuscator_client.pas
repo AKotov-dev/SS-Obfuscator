@@ -18,7 +18,7 @@ uses
 
 begin
   RequireDerivedFormResource := True;
-  Application.Title:='SS-Obfuscator-Client v0.3';
+  Application.Title:='SS-Obfuscator-Client v0.3.1 (xray-plugin v1.8.24)';
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
