@@ -2,7 +2,7 @@
 name=ss-obfuscator-server
 
 [VERSION]
-version=0.3.1
+version=0.3.2
 
 [RELEASE]
 release=0.mgx9
@@ -44,8 +44,8 @@ deb=1
 
 [FILES]
 0=/usr/bin/xray-plugin
-1=/etc/ss-obfuscator-server/
-2=/etc/systemd/system/ss-obfuscator-server.service
+1=/etc/systemd/system/ss-obfuscator-server.service
+2=/etc/ss-obfuscator-server/
 3=/usr/share/doc/ss-obfuscator-server/
 
 [AFTERINSTALL]
@@ -80,17 +80,21 @@ toolversion=unknown
 9=Details:
 10=By default, the password is already set (50 characters). When changing the password to your own, do not forget to change it on the server in the file /etc/ss-obfuscator-server/server.json. If you need a client configuration file, it is here: ~/.config/ss-obfuscator-client/client.json
 11=
-12=v0.3.1
-13=+ Shadowsocks over gRPC (port 443 by default)
-14=+ Update xray-plugin v1.8.24
+12=v0.3.2
+13=+ Divisions in packages: client - /usr/local/bin/xray-plugin, server - /usr/bin/xray-plugin
+14=+ Cosmetic edits
 15=
-16=v0.3
-17=+ Shadowsocks over gRPC
-18=+ Cosmetic edits
+16=v0.3.1
+17=+ Shadowsocks over gRPC (port 443 by default)
+18=+ Update xray-plugin v1.8.24
 19=
-20=v0.2
-21=+ Changed the server port to 443 by default
-22=+ Improved configuration files client.json and server.json
-23=+ Improved ss-obfuscator-client.service and ss-obfuscator-server.service
-24=
-25=v0.1 - Initial release
+20=v0.3
+21=+ Shadowsocks over gRPC
+22=+ Cosmetic edits
+23=
+24=v0.2
+25=+ Changed the server port to 443 by default
+26=+ Improved configuration files client.json and server.json
+27=+ Improved ss-obfuscator-client.service and ss-obfuscator-server.service
+28=
+29=v0.1 - Initial release

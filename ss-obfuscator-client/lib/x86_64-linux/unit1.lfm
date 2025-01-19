@@ -1,52 +1,55 @@
 object MainForm: TMainForm
-  Left = 313
-  Height = 625
-  Top = 123
-  Width = 846
+  Left = 301
+  Height = 626
+  Top = 125
+  Width = 883
   Caption = 'SS-Obfuscator-Client'
-  ClientHeight = 625
-  ClientWidth = 846
+  ClientHeight = 626
+  ClientWidth = 883
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   SessionProperties = 'Width;Height;Left;Top'
-  LCLVersion = '2.2.0.4'
+  LCLVersion = '3.6.0.0'
   object Label1: TLabel
+    AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
     Left = 8
     Height = 17
-    Top = 18
+    Top = 15
     Width = 55
     Caption = 'Server IP:'
   end
   object Label2: TLabel
     AnchorSideLeft.Control = ServerEdit
     AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
-    Left = 278
+    Left = 292
     Height = 17
-    Top = 18
+    Top = 15
     Width = 69
     Anchors = [akTop]
     BorderSpacing.Left = 12
     Caption = 'Server port:'
   end
   object Label3: TLabel
-    AnchorSideTop.Control = PasswordEdit
+    AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
     Left = 8
     Height = 17
-    Top = 58
+    Top = 56
     Width = 61
     Caption = 'Password:'
   end
   object Label4: TLabel
     AnchorSideLeft.Control = PasswordEdit
     AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
-    Left = 273
+    Left = 286
     Height = 17
-    Top = 58
+    Top = 56
     Width = 64
     Anchors = [akTop]
     BorderSpacing.Left = 8
@@ -55,12 +58,12 @@ object MainForm: TMainForm
   object ServerEdit: TEdit
     AnchorSideLeft.Control = Label1
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = Label1
+    AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
     Left = 65
-    Height = 36
+    Height = 37
     Hint = 'Specify the IP of your server'
-    Top = 8
+    Top = 5
     Width = 167
     BorderSpacing.Left = 2
     ParentShowHint = False
@@ -71,12 +74,12 @@ object MainForm: TMainForm
   object ServerPortEdit: TEdit
     AnchorSideLeft.Control = Label2
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = Label2
+    AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
-    Left = 349
-    Height = 36
+    Left = 363
+    Height = 37
     Hint = 'Default: 443'
-    Top = 8
+    Top = 5
     Width = 104
     BorderSpacing.Left = 2
     ParentShowHint = False
@@ -87,11 +90,12 @@ object MainForm: TMainForm
   object PasswordEdit: TEdit
     AnchorSideLeft.Control = Label3
     AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = StopBtn
     AnchorSideRight.Control = ServerEdit
     AnchorSideRight.Side = asrBottom
     Left = 71
-    Height = 36
-    Top = 48
+    Height = 37
+    Top = 47
     Width = 161
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 2
@@ -103,15 +107,15 @@ object MainForm: TMainForm
   object LocalPortEdit: TEdit
     AnchorSideLeft.Control = Label4
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = Label4
+    AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = ServerPortEdit
     AnchorSideRight.Side = asrBottom
-    Left = 339
-    Height = 36
+    Left = 352
+    Height = 37
     Hint = 'Default: 1080'
-    Top = 48
-    Width = 114
+    Top = 46
+    Width = 115
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 2
     ParentShowHint = False
@@ -120,20 +124,20 @@ object MainForm: TMainForm
     Text = '1080'
   end
   object LogMemo: TMemo
-    AnchorSideTop.Control = StopBtn
+    AnchorSideTop.Control = LocalPortEdit
     AnchorSideTop.Side = asrBottom
     Left = 0
     Height = 513
-    Top = 92
-    Width = 846
+    Top = 93
+    Width = 883
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Top = 8
+    BorderSpacing.Top = 10
     Font.Height = -12
     Font.Name = 'Monospace'
     ParentFont = False
     ReadOnly = True
-    ScrollBars = ssVertical
+    ScrollBars = ssAutoBoth
     TabOrder = 6
     WantReturns = False
     WordWrap = False
@@ -141,9 +145,9 @@ object MainForm: TMainForm
   object StartBtn: TSpeedButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 748
+    Left = 785
     Height = 34
-    Top = 8
+    Top = 6
     Width = 93
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
@@ -155,11 +159,11 @@ object MainForm: TMainForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = LocalPortEdit
     AnchorSideBottom.Side = asrBottom
-    Left = 748
+    Left = 785
     Height = 34
-    Top = 50
+    Top = 47
     Width = 93
-    Anchors = [akRight, akBottom]
+    Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
     Caption = 'Stop'
     OnClick = StopBtnClick
@@ -167,40 +171,40 @@ object MainForm: TMainForm
   object AutoStartBox: TCheckBox
     AnchorSideLeft.Control = ServerPortEdit
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = ServerPortEdit
+    AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
-    Left = 504
+    Left = 529
     Height = 32
-    Top = 10
+    Top = 7
     Width = 166
     Anchors = [akTop]
     BorderSpacing.Left = 8
     Caption = 'Autostart after reboot'
-    OnChange = AutoStartBoxChange
     TabOrder = 2
+    OnChange = AutoStartBoxChange
   end
   object ClearBox: TCheckBox
     AnchorSideLeft.Control = AutoStartBox
-    AnchorSideTop.Control = LocalPortEdit
+    AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
-    Left = 504
+    Left = 529
     Height = 32
     Hint = 'Mageia only'
-    Top = 50
+    Top = 48
     Width = 190
     Caption = 'Clear cookies on start GUI'
-    OnChange = ClearBoxChange
     ParentShowHint = False
     ShowHint = True
     TabOrder = 5
+    OnChange = ClearBoxChange
   end
   object Shape1: TShape
     AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = StartBtn
-    Left = 731
+    Left = 768
     Height = 12
-    Top = 19
+    Top = 17
     Width = 12
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
@@ -211,8 +215,8 @@ object MainForm: TMainForm
   object StaticText1: TStaticText
     Left = 0
     Height = 20
-    Top = 605
-    Width = 846
+    Top = 606
+    Width = 883
     Align = alBottom
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
     Font.Color = clGray
