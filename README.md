@@ -4,7 +4,7 @@ Shadowsocks client (with GUI) and server (for VPS) with obfuscation
   
 SS-Obfuscator-Server
 --
-Rent a VPS with a foreign IP address and install a package on it `ss-obfuscator-server` (rpm/deb)
+Rent a VPS with a foreign IP address and install a package on it `ss-obfuscator-server` ([rpm/deb](https://github.com/AKotov-dev/SS-Obfuscator/releases))
 
 SS-Obfuscator-Client
 --
