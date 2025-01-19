@@ -18,4 +18,4 @@ By default, the password is already set (50 characters). When changing the passw
   
 `shadowsocks-libev` packages are missing in Fedora and CentOS. If necessary, they can be installed manually from the archives `rpmbuild-fedora.tar.gz` and `rpmbuild-centos.tar.gz` accordingly (see the folder `./rpmbuild/RPMS/{noarch,x86_64}`). You will probably have to disable `selinux` (SELINUX=disable in /etc/selinux/config) and open port `443` (tcp/udp) in `iptables`. You may also need to connect a repository: `yum -y install epel-release`.  
   
-Similar project: [vmess-ws](https://github.com/AKotov-dev/vmess-ws)
+Similar project: [SS-Cloak](https://github.com/AKotov-dev/SS-Cloak)
