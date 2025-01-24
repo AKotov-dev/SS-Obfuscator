@@ -1,0 +1,40 @@
+object QRForm: TQRForm
+  Left = 351
+  Height = 167
+  Top = 143
+  Width = 167
+  AutoSize = True
+  Caption = 'QR code'
+  ClientHeight = 167
+  ClientWidth = 167
+  FormStyle = fsStayOnTop
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '3.6.0.0'
+  object Image1: TImage
+    Left = 8
+    Height = 150
+    Top = 8
+    Width = 150
+    AutoSize = True
+    Stretch = True
+  end
+  object GetQR: TAsyncProcess
+    Active = False
+    Executable = 'bash'
+    Options = [poWaitOnExit]
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    Left = 64
+    Top = 48
+  end
+end

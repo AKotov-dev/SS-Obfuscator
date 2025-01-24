@@ -66,6 +66,14 @@ msgctxt "tmainform.serverportedit.text"
 msgid "443"
 msgstr ""
 
+#: tmainform.speedbutton1.caption
+msgid "QR"
+msgstr ""
+
+#: tmainform.speedbutton1.hint
+msgid "Get connection QR code"
+msgstr ""
+
 #: tmainform.startbtn.caption
 msgid "Start"
 msgstr ""
@@ -76,5 +84,9 @@ msgstr ""
 
 #: tmainform.stopbtn.caption
 msgid "Stop"
+msgstr ""
+
+#: tqrform.caption
+msgid "QR code"
 msgstr ""
 

@@ -26,6 +26,7 @@ type
     Label4: TLabel;
     LogMemo: TMemo;
     Shape1: TShape;
+    SpeedButton1: TSpeedButton;
     StartBtn: TSpeedButton;
     StaticText1: TStaticText;
     StopBtn: TSpeedButton;
@@ -34,6 +35,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
     procedure StartBtnClick(Sender: TObject);
     procedure StopBtnClick(Sender: TObject);
     procedure StartProcess(command: string);
@@ -48,11 +50,11 @@ var
 
 implementation
 
-uses start_trd, portscan_trd;
+uses unit2, start_trd, portscan_trd;
 
-{$R *.lfm}
+  {$R *.lfm}
 
-{ TMainForm }
+  { TMainForm }
 
 
 //Общая процедура запуска команд (асинхронная)
@@ -229,6 +231,12 @@ begin
   //Запуск поток непрерывного чтения лога
   FShowLogTRD := ShowLogTRD.Create(False);
   FShowLogTRD.Priority := tpNormal;
+end;
+
+procedure TMainForm.SpeedButton1Click(Sender: TObject);
+begin
+  if FileExists(GetUserDir + '.config/ss-obfuscator-client/client.json') then
+    QRForm.Show;
 end;
 
 end.

@@ -2,10 +2,10 @@ object MainForm: TMainForm
   Left = 301
   Height = 626
   Top = 125
-  Width = 883
+  Width = 868
   Caption = 'SS-Obfuscator-Client'
   ClientHeight = 626
-  ClientWidth = 883
+  ClientWidth = 868
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -16,18 +16,17 @@ object MainForm: TMainForm
     AnchorSideTop.Side = asrCenter
     Left = 8
     Height = 17
-    Top = 17
+    Top = 15
     Width = 55
     Caption = 'Server IP:'
   end
   object Label2: TLabel
-    AnchorSideLeft.Control = ServerEdit
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
-    Left = 292
+    Left = 287
     Height = 17
-    Top = 17
+    Top = 15
     Width = 69
     Anchors = [akTop]
     BorderSpacing.Left = 12
@@ -38,21 +37,21 @@ object MainForm: TMainForm
     AnchorSideTop.Side = asrCenter
     Left = 8
     Height = 17
-    Top = 59
+    Top = 56
     Width = 61
     Caption = 'Password:'
   end
   object Label4: TLabel
-    AnchorSideLeft.Control = PasswordEdit
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
-    Left = 286
+    AnchorSideRight.Control = LocalPortEdit
+    Left = 292
     Height = 17
-    Top = 59
+    Top = 56
     Width = 64
-    Anchors = [akTop]
-    BorderSpacing.Left = 8
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 2
     Caption = 'Local port:'
   end
   object ServerEdit: TEdit
@@ -63,7 +62,7 @@ object MainForm: TMainForm
     Left = 65
     Height = 37
     Hint = 'Specify the IP of your server'
-    Top = 7
+    Top = 5
     Width = 167
     BorderSpacing.Left = 2
     ParentShowHint = False
@@ -76,10 +75,10 @@ object MainForm: TMainForm
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
-    Left = 363
+    Left = 358
     Height = 37
     Hint = 'Default: 443'
-    Top = 7
+    Top = 5
     Width = 104
     BorderSpacing.Left = 2
     ParentShowHint = False
@@ -95,7 +94,7 @@ object MainForm: TMainForm
     AnchorSideRight.Side = asrBottom
     Left = 71
     Height = 37
-    Top = 50
+    Top = 47
     Width = 161
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 2
@@ -105,19 +104,17 @@ object MainForm: TMainForm
     Text = '6v5mTMPy2nQvRY9GXZsRkrqLk2guR6Z0i4f9mupi1B9pj51A5W'
   end
   object LocalPortEdit: TEdit
-    AnchorSideLeft.Control = Label4
-    AnchorSideLeft.Side = asrBottom
+    AnchorSideLeft.Control = ServerPortEdit
     AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = ServerPortEdit
     AnchorSideRight.Side = asrBottom
-    Left = 352
+    Left = 358
     Height = 37
     Hint = 'Default: 1080'
-    Top = 49
-    Width = 115
+    Top = 46
+    Width = 104
     Anchors = [akTop, akLeft, akRight]
-    BorderSpacing.Left = 2
     ParentShowHint = False
     ShowHint = True
     TabOrder = 4
@@ -127,9 +124,9 @@ object MainForm: TMainForm
     AnchorSideTop.Control = LocalPortEdit
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 510
-    Top = 96
-    Width = 883
+    Height = 513
+    Top = 93
+    Width = 868
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 10
@@ -145,9 +142,9 @@ object MainForm: TMainForm
   object StartBtn: TSpeedButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 785
-    Height = 34
-    Top = 8
+    Left = 770
+    Height = 35
+    Top = 6
     Width = 93
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
@@ -159,9 +156,9 @@ object MainForm: TMainForm
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = LocalPortEdit
     AnchorSideBottom.Side = asrBottom
-    Left = 785
-    Height = 34
-    Top = 50
+    Left = 770
+    Height = 35
+    Top = 47
     Width = 93
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
@@ -169,16 +166,14 @@ object MainForm: TMainForm
     OnClick = StopBtnClick
   end
   object AutoStartBox: TCheckBox
-    AnchorSideLeft.Control = ServerPortEdit
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
-    Left = 529
+    Left = 512
     Height = 32
-    Top = 9
+    Top = 7
     Width = 166
     Anchors = [akTop]
-    BorderSpacing.Left = 8
     Caption = 'Autostart after reboot'
     TabOrder = 2
     OnChange = AutoStartBoxChange
@@ -187,10 +182,10 @@ object MainForm: TMainForm
     AnchorSideLeft.Control = AutoStartBox
     AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
-    Left = 529
+    Left = 512
     Height = 32
     Hint = 'Mageia only'
-    Top = 51
+    Top = 48
     Width = 190
     Caption = 'Clear cookies on start GUI'
     ParentShowHint = False
@@ -202,9 +197,9 @@ object MainForm: TMainForm
     AnchorSideTop.Control = StartBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = StartBtn
-    Left = 768
+    Left = 753
     Height = 12
-    Top = 19
+    Top = 17
     Width = 12
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
@@ -216,7 +211,7 @@ object MainForm: TMainForm
     Left = 0
     Height = 20
     Top = 606
-    Width = 883
+    Width = 868
     Align = alBottom
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
     Font.Color = clGray
@@ -224,6 +219,20 @@ object MainForm: TMainForm
     Font.Name = 'Sans'
     ParentFont = False
     TabOrder = 7
+  end
+  object SpeedButton1: TSpeedButton
+    AnchorSideTop.Control = StopBtn
+    AnchorSideRight.Control = StopBtn
+    AnchorSideBottom.Control = StopBtn
+    AnchorSideBottom.Side = asrBottom
+    Left = 729
+    Height = 35
+    Top = 47
+    Width = 39
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Right = 2
+    Caption = 'QR'
+    OnClick = SpeedButton1Click
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
